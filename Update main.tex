@@ -1,0 +1,235 @@
+
+
+\documentclass[10pt,a4paper,roman]{moderncv}        
+
+\moderncvstyle{banking}                           
+\moderncvcolor{blue}                               
+\nopagenumbers{}                                
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Prabhjot}{Singh}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+% \address{500 College Ave, Swarthmore, PA 19081 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-14mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+ %\faGlobe\enspace mysite.me & 
+ \faEnvelopeO\enspace prabhjot\_s12@outlook.com & \faGithub\enspace https://github.com/PrabhjotMalhi & \faMobile\enspace 647-949-2883\\  
+\end{tabular}
+\end{center}
+
+\vspace{-6mm}
+
+\section{EDUCATION}
+{\customcventry{Expected Graduation: December 2025}{B.Eng in Software Engineering }{McMaster University}{Hamilton, ON}{}{}}
+
+\vspace*{-4mm}
+
+\section{SKILLS}
+\textbf{Programming:} Python | SQL | Java | C++ | JavaScript (Node.js, React.js) | HTML/CSS \\
+%\textbf{Cloud \& DevOps:} AWS (S3, SNS, RDS) | Azure DevOps | Docker | CI/CD | JFrog Artifactory\\
+\textbf{Frameworks \& Tools:} Git | Azure DevOps | Docker | Spring Boot | AWS | RESTful APIs | CI/CD | SDLC\\
+%\textbf{ToolKit:} Git | Azure DevOps | Docker | Spring Boot | JFrog Artifactory | AWS | Enterprise DataHub \\
+\textbf{Development Focus:} Full-Stack Development | Machine Learning | Secure Backend Systems | Agile \\
+
+
+\vspace*{-7mm}
+
+
+
+\section{EXPERIENCE}
+
+{\customcventry{May 2024 - Aug 2024}{CIBC Capital Markets}{\textbf{Insights Analyst Co-op}}{Toronto, ON} {}
+{\begin{itemize}
+  \item Worked with DFS Analytics developing machine learning models to analyze fraud data for over \textbf{3,000,000} clients utilizing \textbf{Python \& SQL Impala}, improving fraud detection speed and accuracy.
+  \item Engineered an \textbf{Access to Funds} model for credit limit assessments, enhancing backend processes \& boosting fraud detection efficiency by \textbf{20\%} through strategic data analysis and machine learning. 
+  \item Collaborated with cross-functional teams to deliver key fraud detection features, facilitating a seamless transition from ideation to deployment ensuring alignment with security and performance standards.
+  %Implemented fraud flagging features within model to flag clients who possibly cash in bad cheques.
+  %\item Developed Scaleable ML algorithms that automated processes for fraud, increasing efficiency by 20%.
+  \item Integrated \textbf{JFrog Artifactory \& DevOps} practices to streamline unit-testing and deployment, reducing release time by \textbf{15\%} and improving \textbf{CI/CD} processes.
+\end{itemize}
+}
+\vspace*{1.5mm}
+
+{\customcventry{May 2023 - Aug 2023}{CIBC}{\textbf{Product Analyst Co-op}}{Toronto, ON}{}
+{\begin{itemize}
+  %\item Worked with Product team on different strategies and product enhancements.
+  \item Automated workflows using \textbf{VBA} \& integrated \textbf{Braze}, boosting backend efficiency by \textbf{30\%}.
+  \item Enhanced over \textbf{60+} marketing campaigns by optimizing data.
+\end{itemize}
+}
+
+\vspace*{2.5mm}
+
+{\customcventry{May 2021 - Aug 2021 \& May 2022 - Aug 2022}{CIBC}{\textbf{Analyst Co-op}}{Remote}{}
+{\begin{itemize}
+  %\item Assisted Sales Reps with their day-to-day admin tasks.
+  %\item Led change management initiatives while coordinating with internal teams and external partners
+  %Follow-up with internal and external partners to move files at different stages until completion.
+  \item Regular audit checks done, ensuring all documents are inline and imaged appropriately for clients.
+  \item Managed \textbf{ServiceNow} requests and change management documentation for over \textbf{100+} projects. 
+  %\item Check doc-tracking to ensure no outstanding items \& completed within a timely manner to ensure funding is not delayed.
+  %\item Opening of \textbf{FNF} portals, follow-ups \& \textbf{ServiceNow} change requests for documentation and implementation plans for change management.
+  %\item Maintaining the sales support tracker, ensuring accurate reports for over \textbf{100+} projects.
+\end{itemize}
+}
+
+\vspace{-3mm}
+\section{PROJECTS}
+
+{\customcvproject{E-Commerce Application}{Aug 2023 - Present}
+  {\begin{itemize}
+    \item Designed a scalable e-commerce web app leveraging \textbf{Spring Boot} for backend services and \textbf{React} for the frontend interface.
+    \item Implemented microservices for catalog management, order processing, payment integration, ensuring maintainability.
+    \item Utilized \textbf{Kafka} for event-driven architecture to manage inventory updates and asynchronous order status notifications.
+    \item Deployed services on AWS infrastructure using S3 for content storage and RDS for database management
+    %\item Incorporated multi-page functionality with react-router-dom to ensure efficient site navigation.
+  \end{itemize}
+  }
+}
+
+\vspace*{2.5mm}
+
+{\customcvproject{Aquaponics System Application}{Aug 2024 - Dec 2024} 
+{\begin{itemize}
+    \item Developed an \textbf{IOS} application in \textbf{Swift}, integrating real-time notifications through \textbf{AWS SNS} for remote control of an Aquaponics system.
+    \item Feature engineered various functionalities for temperature, lighting and feeder controls, utilizing \textbf{RESTful API} calls to manage \textbf{Arduino}.\\   %\item Plan events to increase social interaction among ACM members, as well as events to foster the spirit of computer science at Illinois
+\end{itemize}
+}
+
+
+\vspace*{-6mm}
+\section{ADDITIONAL EXPERIENCE}
+
+\textbf{Open Source Contributions:} Contributed to GitHub repositories, focusing on feature development in small scale applications. \\
+%\textbf{Financial Engineering:} Exploring \textbf{Financial Models} and \textbf{Quantitative Analysis} through open source contributions and coursework. \\
+\textbf{Learning Ruby on Rails:} As an avid learner that is always looking to expand my skill set, I am currently building a web application utilizing Ruby on Rails to deepen my skills in backend \& large scale application development, enhancing knowledge in database interactions and MVC architecture.\\
+%\textbf{Cloud Computing:} Broadening my knowledge of cloud infrastructure within AWS (EC3, S3, Lambda). %for scalable and secure applications.
+
+
+%{\customcvproject{Amazing Project 3}{Jan 2015 – May 2015}
+%{\begin{itemize}
+%  \item Assist in recruiting potential and admitted students to the UIUC computer science program
+ % \item Attend information sessions, admitted student Q\&A’s, and student lunches to generate interest in the Illinois Computer Science department
+%\end{itemize}
+}
+}
+
+%\section{ADDITIONAL}
+%\begin{minipage}{\maincolumnwidth}%
+	%\small{
+    	%\begin{itemize}
+         % \item Relevant Coursework: Data Structures and Algorithms, Natural Language Processing, Computer Systems, Databases, Computer Security, Abstract Algebra
+         % \item President of XYZ Club, Public Relations Manager of Swarthmore QWE Club
+        %  \item Programming Languages: Python, C, C++, PHP, Java, HTML/CSS, Javascript, jQuery, NodeJS
+        %  \item Fluent in Gibberish, conversational in Nonsense
+		%\end{itemize}}%
+%\end{minipage}%
+      
+%}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
